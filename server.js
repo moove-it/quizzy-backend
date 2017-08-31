@@ -6,6 +6,7 @@ import configuration from './config/config.js';
 
 var env = process.env.NODE_ENV || 'development';
 var config = configuration[env];
+import matches from './config/routes/matches.js';
 
 // Connect to MongoDB
 mongoose.connect(`mongodb://${config.database.host}/${config.database.db}`);
@@ -23,6 +24,8 @@ if ((env != 'test') && (env != 'prodTest')) {
 
 //Middleware to set the general routing
 app.use('/users', users);
+app.use('/matches', matches);
+
 
 const server = app.listen(config.server.port, config.server.host, () => {
   const { address, port } = server.address();
