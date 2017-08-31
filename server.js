@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
 import users from './config/routes/users.js';
+import matches from './config/routes/matches.js';
 
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost/quizzy-backend');
@@ -17,6 +18,8 @@ app.use(morgan('combined'));
 
 //Middleware to set the general routing
 app.use('/users', users);
+app.use('/matches', matches);
+
 
 const server = app.listen(3000, () => {
   const { address, port } = server.address();
