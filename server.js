@@ -1,6 +1,11 @@
 import express from 'express';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
+<<<<<<< 5129b79a3c39f8ebcc2cbe3c518b27aa92ea0398
+=======
+import users from './config/routes/users.js';
+import matches from './config/routes/matches.js';
+>>>>>>> Add routes and rename match_controller to matches_controller
 import configuration from './config/config.js';
 import games from './config/routes/games';
 import users from './config/routes/users.js';
