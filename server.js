@@ -2,6 +2,7 @@ import express from 'express';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
 import users from './config/routes/users.js';
+import matches from './config/routes/matches.js';
 import configuration from './config/config.js';
 
 var env = process.env.NODE_ENV || 'development';
