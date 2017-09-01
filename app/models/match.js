@@ -1,35 +1,33 @@
 import mongoose, { Schema } from 'mongoose';
 
 var matchSchema = new Schema ({
-    // id : { 
-    //     type: Number,
-    //     unique: true
-    // },
     isRealTime: Boolean,
     players: [String],
     owner: String,
     endingDate: Date,
     game: {
-        id : { type: Number, index: true },
-        name : String,
-        description : String,
-        rating : Number,
-        timesPlayed : Number,
-        creator : String,
-        questions : [{
-            id : { type: Number, index: true },
-            text : String,
-            difficulty : String,
-            answers : [String],
-            correctAnswer : Number
+        id : {
+            type: Number,
+            index: true
+        },
+        name: String,
+        description: String,
+        rating: Number,
+        timesPlayed: Number,
+        creator: String,
+        questions: [{
+            id: Number,
+            difficulty: String,
+            answers: Array,
+            correctAnswer: Number
         }],
-        tags : [String],
+        tags: [String],
         ranking : [{
-            user: String,
+            nick: String,
             points: Number
         }],
-        creationDate : Date,
-        image : String
+        creationDate: Date,
+        image: String
     },
     result: [Number]
 })
