@@ -1,6 +1,10 @@
 import mongoose, { Schema } from 'mongoose';
 
 var matchSchema = new Schema ({
+    // id : { 
+    //     type: Number,
+    //     unique: true
+    // },
     isRealTime: Boolean,
     players: [String],
     owner: String,
