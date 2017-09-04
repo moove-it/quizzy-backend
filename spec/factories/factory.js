@@ -11,7 +11,7 @@ factory.define('user', User,
 );
 
 factory.define('match', Match, {
-	id: () => faker.random.number(),
+	url: () => faker.random.number(),
 	isRealTime: () => faker.random.boolean(),
 	players: [
 		() => faker.internet.userName(),
