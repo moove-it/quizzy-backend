@@ -24,7 +24,7 @@ if ((env != 'test') && (env != 'prodTest')) {
   app.use(morgan('combined'));
 }
 
-/** cors middleware to accept any pattern matching example.com subdomains */
+/* cors middleware to accept any pattern matching example.com subdomains */
 app.use(cors({ patterns: [ /^.*/ ]}))
 
 //Middleware to set the general routing
